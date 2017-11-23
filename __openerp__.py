@@ -11,10 +11,10 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "pre_init_hook": "pre_init_hook",
-    "post_init_hook": "post_init_hook",
-    "post_load": "post_load",
-    "uninstall_hook": "uninstall_hook",
+#    "pre_init_hook": "pre_init_hook",
+#    "post_init_hook": "post_init_hook",
+#    "post_load": "post_load",
+#    "uninstall_hook": "uninstall_hook",
     "external_dependencies": {
         "python": ['ptvsd'],
         "bin": [],
@@ -24,10 +24,9 @@
         "base_setup"
     ],
     "data": [
-        "views/remote_debug_data.xml",
+        'views/remote_debug_settings_view.xml',
     ],
     "demo": [
-        "demo/remote_debug_demo.xml",
     ],
     "qweb": [
     ]
