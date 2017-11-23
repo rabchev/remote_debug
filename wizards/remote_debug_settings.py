@@ -4,6 +4,8 @@
 
 from openerp import models, fields, api
 
+import ptvsd
+
 PARAMS = [
     ("secret", "remote_debug.secret"),
     ("host", "remote_debug.host"),
@@ -25,3 +27,16 @@ class RemoteDebugSettings(models.Model):
         for field_name, key_name in PARAMS:
             value = getattr(self, field_name, '').strip()
             self.env['ir.config_parameter'].set_param(key_name, value)
+
+    @api.multi
+    def get_default_params(self, fields):
+        res = {}
+        for field_name, key_name in PARAMS:
+            res[field_name] = self.env['ir.config_parameter'].get_param(key_name, '').strip()
+        return res
+
+    @api.multi
+    def start_debug(self):
+        ptvsd.enable_attach("my_secret", address=("0.0.0.0", 6899))
+        
+

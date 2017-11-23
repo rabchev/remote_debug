@@ -3,7 +3,7 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 
 <openerp>
-<data>
+<data noupdate="1">
 
     <record id="view_remote_debug_config_settings" model="ir.ui.view">
         <field name="name">Remote debug settings</field>
@@ -15,6 +15,7 @@
                         <field name="secret" />
                         <field name="host" />
                         <field name="port" />
+                        <button string="Start Debug" type="object" name="start_debug"/>
                     </group>
                 </sheet>
             </form>
