@@ -30,5 +30,6 @@
     "demo": [
     ],
     "qweb": [
+        "static/src/xml/*.xml"
     ]
 }

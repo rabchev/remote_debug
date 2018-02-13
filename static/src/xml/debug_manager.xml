@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<t t-extend="WebClient.DebugManager.Global">
+    <t t-jquery="li > a[data-action='split_assets']" t-operation="after">
+        <t t-if="manager._is_admin">
+            <li>
+                <a href="#" data-action="remote_debug">Activate Remote Debugging</a>
+            </li>
+        </t>
+    </t>
+</t>
+
+</templates>

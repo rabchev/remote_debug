@@ -28,6 +28,12 @@
         <field name="target">inline</field>
     </record>
 
-    <menuitem id="menu_remote_debug_config" name="Remote debug Settings" parent="base.menu_ir_property" action="action_remote_debug_configuration" />
+    <template id="assets_backend" name="remote debug assets" inherit_id="web.assets_backend">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/remote_debug/static/src/js/debug_manager.js"></script>
+        </xpath>
+    </template>
+
+    <!-- <menuitem id="menu_remote_debug_config" name="Remote debug Settings" parent="base.menu_ir_property" action="action_remote_debug_configuration" /> -->
 
 </odoo>
