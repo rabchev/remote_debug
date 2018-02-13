@@ -2,22 +2,21 @@
 <!-- Copyright <YEAR(S)> <AUTHOR(S)>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 
-<openerp>
+<odoo>
+    <data noupdate="1">
 
-<data noupdate="1">
+        <record id="remote_debug_default_secret" model="ir.config_parameter">
+            <field name="key">remote_debug.secret</field>
+            <field name="value">my_secret</field>
+        </record>
+        <record id="remote_debug_default_host" model="ir.config_parameter">
+            <field name="key">remote_debug.host</field>
+            <field name="value">0.0.0.0</field>
+        </record>
+        <record id="remote_debug_default_port" model="ir.config_parameter">
+            <field name="key">remote_debug.port</field>
+            <field name="value">6899</field>
+        </record>
 
-<record id="remote_debug_default_secret" model="ir.config_parameter">
-     <field name="key">remote_debug.secret</field>
-     <field name="value">my_secret</field>
-</record>
-<record id="remote_debug_default_host" model="ir.config_parameter">
-     <field name="key">remote_debug.host</field>
-     <field name="value">0.0.0.0</field>
-</record>
-<record id="remote_debug_default_port" model="ir.config_parameter">
-     <field name="key">remote_debug.port</field>
-     <field name="value">6899</field>
-</record>
-
-</data>
-</openerp>
+    </data>
+</odoo>

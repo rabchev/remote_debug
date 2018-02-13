@@ -2,8 +2,7 @@
 <!-- Copyright <YEAR(S)> <AUTHOR(S)>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 
-<openerp>
-<data noupdate="1">
+<odoo>
 
     <record id="view_remote_debug_config_settings" model="ir.ui.view">
         <field name="name">Remote debug settings</field>
@@ -29,7 +28,6 @@
         <field name="target">inline</field>
     </record>
 
-    <menuitem id="menu_remote_debug_config" name="Remote debug Settings" parent="base.menu_config" action="action_remote_debug_configuration" />
+    <menuitem id="menu_remote_debug_config" name="Remote debug Settings" parent="base.menu_ir_property" action="action_remote_debug_configuration" />
 
-</data>
-</openerp>
+</odoo>
