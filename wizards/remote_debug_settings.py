@@ -37,6 +37,6 @@ class RemoteDebugSettings(models.Model):
 
     @api.multi
     def start_debug(self):
-        ptvsd.enable_attach("my_secret", address=("0.0.0.0", 6899))
+        ptvsd.enable_attach(address=("0.0.0.0", 6899), redirect_output=True)
         
 
